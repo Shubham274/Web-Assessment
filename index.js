@@ -12,6 +12,12 @@ form.addEventListener("submit", (e) => {
   };
   if (username !== password) {
     alert("Please Enter Valid Credentials");
+  } else if (username == null || username == "") {
+    alert("Please enter a username");
+    return false;
+  } else if (password == null || password == "") {
+    alert("Please enter a password");
+    return false;
   } else {
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", loginUrl, true);
